@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NovaPeople HR Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+  <style>
+
+  </style>
+</head>
+<body>
+
+<!-- ═══ HEADER ═══════════════════════════════════════════════════ -->
+<header>
+  <div class="nav-inner">
+    <a class="logo" href="index.html">
+      <div class="logo-mark">N</div>
+      <span class="logo-text">Nova<span>People</span></span>
+    </a>
+    <nav id="main-nav">
+      <a data-page="home" href="index.html">Home</a>
+      <a data-page="culture" href="culture.html">Culture</a>
+      <a data-page="careers" href="careers.html">Careers</a>
+      <a data-page="benefits" href="Benefits.html">Benefits</a>
+      <a data-page="training" href="Training & Development.html">Training</a>
+    </nav>
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+
+<main>
+
+<article id="page-home" class="page active">
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-grid">
+      <div>
+        <p class="hero-eyebrow">NovaPeople HR Portal</p>
+        <h1>Your people.<br/><em>Our priority.</em></h1>
+        <p>Welcome to the NovaPeople HR Portal — your central hub for culture, careers, benefits, and learning resources. Everything you need, in one place.</p>
+        <div class="hero-actions">
+          <button class="btn-primary" onclick="showPage('careers')">View Open Roles ↗</button>
+          <button class="btn-outline" onclick="showPage('benefits')">Explore Benefits</button>
+        </div>
+      </div>
+      <div>
+        <div class="hero-stats">
+          <div class="stat-item"><strong>420+</strong><span>Employees worldwide</span></div>
+          <div class="stat-item"><strong>18</strong><span>Open positions</span></div>
+          <div class="stat-item"><strong>96%</strong><span>Retention rate</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Links -->
+  <section class="quick-links">
+    <div class="quick-links-inner">
+      <div class="section-header">
+        <p class="section-label">Navigate</p>
+        <h2>What would you like to explore?</h2>
+      </div>
+      <div class="cards-grid">
+        <a class="card" onclick="showPage('culture')">
+          <div class="card-icon">🏛️</div>
+          <h3>Company Culture</h3>
+          <p>Our values, mission, vision, and the people who make NovaPeople great.</p>
+          <span class="card-arrow">→</span>
+        </a>
+        <a class="card" onclick="showPage('careers')">
+          <div class="card-icon">💼</div>
+          <h3>Careers & Vacancies</h3>
+          <p>Browse open roles, understand our hiring process, and apply today.</p>
+          <span class="card-arrow">→</span>
+        </a>
+        <a class="card" onclick="showPage('benefits')">
+          <div class="card-icon">❤️</div>
+          <h3>Employee Benefits</h3>
+          <p>Health, wellness, financial, and lifestyle perks for all employees.</p>
+          <span class="card-arrow">→</span>
+        </a>
+        <a class="card" onclick="showPage('training')">
+          <div class="card-icon">🎓</div>
+          <h3>Training & Development</h3>
+          <p>Access learning resources, HR training videos, and policy documents.</p>
+          <span class="card-arrow">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Announcements -->
+  <section class="content-section" style="background:#fff; padding:3rem 2rem;">
+    <div class="content-inner">
+      <div class="section-header">
+        <p class="section-label">Latest</p>
+        <h2>HR Announcements</h2>
+      </div>
+      <div class="two-col">
+        <div>
+          <h3 style="font-size:15px;font-weight:600;color:var(--navy);margin-bottom:0.75rem;">Recent Updates</h3>
+          <ol style="list-style:none;display:flex;flex-direction:column;gap:10px;">
+            <li style="display:flex;gap:12px;align-items:flex-start;font-size:14px;">
+              <span style="background:var(--navy);color:var(--gold-light);font-size:11px;font-weight:700;padding:3px 8px;border-radius:5px;flex-shrink:0;margin-top:1px;">NEW</span>
+              <span style="color:var(--text-mid);">Annual performance review cycle opens <strong>15 April 2025</strong>. All managers notified.</span>
+            </li>
+            <li style="display:flex;gap:12px;align-items:flex-start;font-size:14px;">
+              <span style="background:var(--cream);color:var(--text-mid);font-size:11px;font-weight:700;padding:3px 8px;border-radius:5px;flex-shrink:0;margin-top:1px;border:1px solid var(--border);">INFO</span>
+              <span style="color:var(--text-mid);">Updated Remote Work Policy effective 1 March 2025. See Training &amp; Development page.</span>
+            </li>
+            <li style="display:flex;gap:12px;align-items:flex-start;font-size:14px;">
+              <span style="background:var(--cream);color:var(--text-mid);font-size:11px;font-weight:700;padding:3px 8px;border-radius:5px;flex-shrink:0;margin-top:1px;border:1px solid var(--border);">INFO</span>
+              <span style="color:var(--text-mid);">New wellness benefit — EAP programme expanded to include family members.</span>
+            </li>
+          </ol>
+        </div>
+        <div>
+          <h3 style="font-size:15px;font-weight:600;color:var(--navy);margin-bottom:0.75rem;">Quick Actions</h3>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:8px;">
+            <li><a onclick="showPage('training')" style="font-size:14px;color:var(--navy);display:flex;align-items:center;gap:8px;cursor:pointer;text-decoration:none;padding:10px 14px;border-radius:8px;background:var(--cream);border:1px solid var(--border);">📋 View HR Policies</a></li>
+            <li><a onclick="showPage('careers')" style="font-size:14px;color:var(--navy);display:flex;align-items:center;gap:8px;cursor:pointer;text-decoration:none;padding:10px 14px;border-radius:8px;background:var(--cream);border:1px solid var(--border);">📤 Submit a Job Referral</a></li>
+            <li><a onclick="showPage('benefits')" style="font-size:14px;color:var(--navy);display:flex;align-items:center;gap:8px;cursor:pointer;text-decoration:none;padding:10px 14px;border-radius:8px;background:var(--cream);border:1px solid var(--border);">💊 Benefits Enrolment</a></li>
+            <li><a href="mailto:hr@novapeople.com" style="font-size:14px;color:var(--navy);display:flex;align-items:center;gap:8px;text-decoration:none;padding:10px 14px;border-radius:8px;background:var(--cream);border:1px solid var(--border);">✉️ Contact HR — hr@novapeople.com</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <p>© 2025 NovaPeople HR Portal. All rights reserved.</p>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="culture.html">Culture</a>
+        <a href="careers.html">Careers</a>
+        <a href="Benefits.html">Benefits</a>
+      </nav>
+    </div>
+  </footer>
+</article>
+
+</body>
+</html>
+
